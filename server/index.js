@@ -1,11 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import loginRegisterApi from "./Api/loginRegisterApi.js";
 import Game from "./Api/gameApi.js";
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 mongoose
   .connect("mongodb+srv://wael:1234@storedb.me2lodu.mongodb.net/")
   .then(console.log("MongoDB:ON"))
