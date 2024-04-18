@@ -8,14 +8,14 @@ export default function Header() {
             games
           </a>
         </li>
-        <li className="flex items-center justify-around mr-1 text-lg">
+        <ul className="flex items-center justify-around mr-1 text-lg">
           <li className=" mr-10 transition ease-in-out duration-500 hover:text-cyan-50 hover:-translate-y-2 ">
             <a href="/cart">Cart</a>
           </li>
           <li className="mr-10 transition ease-in-out duration-500 hover:text-cyan-50 hover:-translate-y-2 ">
             <a href="/login">Logout</a>
           </li>
-        </li>
+        </ul>
       </ul>
     </>
   );
