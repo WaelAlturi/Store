@@ -34,7 +34,7 @@ export default function Main() {
           <div className="grid grid-cols-4 gap-5 place-items-center p-5 ">
             {data.map((item) => (
               <section
-                key={item}
+                key={item._id}
                 className="w-full h-5/6 flex items-center justify-center flex-col group shadow-2xl relative rounded-lg perspective-800"
               >
                 <div className="w-full h-full text-center flex flex-col justify-end items-center transform duration-1000 group-hover:rotate-y-180 group-hover:blur-md  ring-4 ring-blue-600">
