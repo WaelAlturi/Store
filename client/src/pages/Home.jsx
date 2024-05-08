@@ -6,7 +6,7 @@ export default function Home() {
       <header className="w-full h-24 ">
         <Header />
       </header>
-      <main className="w-full h-screen bg-gradient-to-r from-blue-400 to-cyan-600 ">
+      <main className="w-full h-auto">
         <Main />
       </main>
     </>

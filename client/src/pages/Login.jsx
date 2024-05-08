@@ -78,9 +78,9 @@ export default function Login() {
     }
   };
   return (
-    <main className="w-full h-screen flex justify-center items-center bg-gradient-to-t from-slate-700 to-gray-900">
+    <main className="w-full h-screen flex justify-center items-center bg-gradient-to-t from-slate-50 to-slate-200">
       {status ? (
-        <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex justify-around items-center bg-sky-50 rounded-xl shadow-xl transition duration-500">
+        <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex justify-around items-center backdrop-blur-sm  rounded-xl shadow-2xl transition duration-500">
           <section
             className={`sm:w-1/2 sm:h-full xs:w-5/6 flex justify-center items-center flex-col ${
               isFirstLoad ? "animate-left" : ""
@@ -179,7 +179,7 @@ export default function Login() {
           </section>
         </div>
       ) : (
-        <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex flex-row-reverse justify-around items-center bg-sky-50 rounded-xl shadow-xl">
+        <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex flex-row-reverse justify-around items-center backdrop-blur-sm rounded-xl  shadow-2xl">
           <section className="sm:w-1/2 sm:h-full xs:w-5/6 h-full flex justify-center items-center flex-col animate-right  ">
             <span className=" h-10 w-auto lg:text-5xl sm:text-4xl xs:text-3xl material-icons">
               games

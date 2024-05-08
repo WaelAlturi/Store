@@ -20,6 +20,14 @@ export default {
             transform: "translateX(0)",
           },
         },
+        up: {
+          "0%": {
+            transform: "translateY(60%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
         text: {
           "0%": {
             opacity: "0",
@@ -30,17 +38,18 @@ export default {
         },
         border: {
           "0%": {
-            transform: "rotate(0deg)",
+            transform: "rotateY(0deg)",
           },
           "100%": {
-            transform: "rotate(360deg)",
+            transform: "rotateY(180deg)",
           },
         },
       },
       animation: {
         right: "right 1.2s ease-in-out ",
         left: "left 1.2s ease-in-out ",
-        border: "border 4s linear infinite",
+        up: "up 0.9s ease-in-out ",
+        border: "border 0.7s linear ",
       },
     },
     borderRadius: {
@@ -57,6 +66,9 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
+    // rotate: {
+    //   180: "rotateY(180deg)",
+    // },
   },
-  plugins: [],
+  plugins: [require("@xpd/tailwind-3dtransforms")],
 };
