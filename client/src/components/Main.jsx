@@ -8,11 +8,28 @@ import {
 
 export default function Main() {
   const [data, setData] = useState(null);
-  const x = 20;
   // const [name, setName] = useState("");
-
   // const [image, setImage] = useState("");
   // const [description, seDescription] = useState("");
+  const sectionsLoading = (numSections) => {
+    const sections = [];
+    let i = 0;
+    while (i < numSections) {
+      sections.push(
+        <section
+          key={i}
+          className="w-full h-80 bg-slate-500 flex items-center justify-end flex-col group shadow-xl animate-pulse p-5"
+        >
+          <div className="h-4 w-40 bg-slate-400 rounded-xl animate-pulse">
+            <span></span>
+          </div>
+        </section>
+      );
+      i++;
+    }
+
+    return sections;
+  };
   const Games = async () => {
     try {
       const response = await axios.get(URL.gamesData);
@@ -57,7 +74,9 @@ export default function Main() {
             ))}
           </div>
         ) : (
-          <div></div>
+          <div className="grid grid-cols-4 gap-5 place-items-center p-5">
+            {sectionsLoading(20)}
+          </div>
         )}
       </section>
     </main>
