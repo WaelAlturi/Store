@@ -66,9 +66,6 @@ export default {
       lg: "1024px",
       xl: "1280px",
     },
-    // rotate: {
-    //   180: "rotateY(180deg)",
-    // },
   },
   plugins: [require("@xpd/tailwind-3dtransforms")],
 };

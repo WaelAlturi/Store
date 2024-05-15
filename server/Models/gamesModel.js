@@ -5,5 +5,6 @@ const newGame = new Schema({
   image: String,
   price: Number,
   description: String,
+  genres: [],
 });
 export default mongoose.model("Games", newGame);
