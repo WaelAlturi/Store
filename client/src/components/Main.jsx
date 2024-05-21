@@ -18,7 +18,7 @@ export default function Main() {
       sections.push(
         <section
           key={i}
-          className="w-full h-80 bg-slate-500 flex items-center justify-end flex-col group shadow-xl animate-pulse p-5"
+          className="w-full h-96 bg-slate-500 flex items-center justify-end flex-col group shadow-xl animate-pulse p-5"
         >
           <div className="h-4 w-40 bg-slate-400 rounded-xl animate-pulse">
             <span></span>
