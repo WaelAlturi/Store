@@ -77,10 +77,15 @@ export default function Login() {
       console.log(err);
     }
   };
+  const clear = () => {
+    setEmail("");
+    setFullName("");
+    setPassword("");
+  };
   return (
     <main className="w-full h-screen flex justify-center items-center bg-gradient-to-t from-slate-50 to-slate-200">
       {status ? (
-        <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex justify-around items-center backdrop-blur-sm  rounded-xl shadow-2xl transition duration-500">
+        <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex justify-around items-center backdrop-blur-sm  rounded-xl shadow-2xl ">
           <section
             className={`sm:w-1/2 sm:h-full xs:w-5/6 flex justify-center items-center flex-col ${
               isFirstLoad ? "animate-left" : ""
@@ -157,7 +162,7 @@ export default function Login() {
           <section
             className={`lg:w-1/2 lg:h-full sm:w-1/2 sm:h-full  max-sm:hidden space-y-10 flex justify-center items-center flex-col bg-indigo-800 rounded-r-lg rounded-l-large ${
               isFirstLoad
-                ? "animate-right transform delay-1000 duration-500 ease-in-out "
+                ? "animate-right delay-1000 duration-500 ease-in-out "
                 : ""
             }`}
           >
@@ -170,6 +175,7 @@ export default function Login() {
             <button
               onClick={() => {
                 setStatus(!status);
+                clear();
                 !isFirstLoad ? setIsFirstLoad(true) : "";
               }}
               className="w-1/3 text-center border rounded-md text-white p-2  "
@@ -180,7 +186,7 @@ export default function Login() {
         </div>
       ) : (
         <div className="lg:w-4/6 lg:h-4/6  xs:w-5/6 xs:h-4/6 flex flex-row-reverse justify-around items-center backdrop-blur-sm rounded-xl  shadow-2xl">
-          <section className="sm:w-1/2 sm:h-full xs:w-5/6 h-full flex justify-center items-center flex-col animate-right  ">
+          <section className="sm:w-1/2 sm:h-full xs:w-5/6 h-full flex justify-center items-center flex-col animate-right">
             <span className=" h-10 w-auto lg:text-5xl sm:text-4xl xs:text-3xl material-icons">
               games
             </span>
@@ -267,7 +273,7 @@ export default function Login() {
               </div>
             </form>
           </section>
-          <section className="lg:w-1/2 lg:h-full sm:w-1/2 sm:h-full  max-sm:hidden space-y-10 flex justify-center items-center flex-col bg-indigo-800 rounded-lg rounded-r-large animate-left transform delay-1000 duration-500 ease-in-out">
+          <section className="lg:w-1/2 lg:h-full sm:w-1/2 sm:h-full  max-sm:hidden space-y-10 flex justify-center items-center flex-col bg-indigo-800 rounded-lg rounded-r-large animate-left delay-1000 duration-500 ease-in-out">
             <h1 className="text-center lg:text-4xl sm:text-3xl font-bold text-white">
               Welcome Back!
             </h1>

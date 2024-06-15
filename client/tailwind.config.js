@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primary: " #5f4078",
+        textColor: "#A175C4",
+      },
       keyframes: {
         right: {
           "0%": {
