@@ -1,6 +1,6 @@
 import Header from "../components/Header.jsx";
-import Main from "../components/Main.jsx";
-import Aside from "../components/Aside.jsx";
+import Main from "../components/Home/Main.jsx";
+import Aside from "../components/Home/Aside.jsx";
 export default function Home() {
   return (
     <div className=" bg-gradient-to-b from-primary to-black w-full h-full">

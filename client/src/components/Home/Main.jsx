@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import URL from "../URL.js";
+import URL from "../../URL.js";
 import {
   ShoppingCartIcon,
   EllipsisHorizontalCircleIcon,
@@ -38,6 +38,20 @@ export default function Main() {
       console.log(error);
     }
   };
+  const addToCart = (gameData) => {
+    try {
+      axios
+        .post(URL.addToCart, { gameData })
+        .then(() => {
+          console.log("ADD Game ");
+        })
+        .catch((e) => {
+          console.log(e.message);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  };
   useEffect(() => {
     Games();
   }, []);
@@ -45,10 +59,10 @@ export default function Main() {
     <article className=" w-full h-auto flex justify-center">
       <section className="w-full h-full overflow-y-hidden">
         {data ? (
-          <article className="grid grid-cols-4 gap-4 place-items-center place  h-full w-full">
+          <article className="grid grid-cols-5 gap-4 place-items-center place  h-full w-full">
             {data.map((item) => (
               <section
-                key={item}
+                key={item._id}
                 className="w-5/6 h-full flex items-center justify-center flex-col group shadow-2xl relative rounded-lg perspective-800 bg-neutral-800"
               >
                 <div className="w-full h-full flex flex-col items-center transform duration-1000 group-hover:rotate-y-180 group-hover:blur-md ">
@@ -63,7 +77,10 @@ export default function Main() {
                 <div className=" w-full h-full transform backface-hidden duration-1000 -rotate-y-180 group-hover:rotate-y-0 absolute">
                   <article className=" w-full h-full flex items-end justify-end ">
                     <p className="flex items-center justify-center w-full h-16 pl-2 bg-transparent">
-                      <span className=" group/icon h-10 w-5/6 rounded-lg flex justify-center items-center bg-neutral-700 text-white border border-stone-600 hover:bg-neutral-500 cursor-pointer duration-700">
+                      <span
+                        className=" group/icon h-10 w-5/6 rounded-lg flex justify-center items-center bg-neutral-700 text-white border border-stone-600 hover:bg-neutral-500 cursor-pointer duration-700"
+                        onClick={() => addToCart(item)}
+                      >
                         ADD TO CART
                       </span>
                       <span className=" group/icon h-14 w-2/6 rounded-xl flex justify-center items-center bg-transparent">

@@ -1,9 +1,9 @@
-import Action from "../assets/ActionIcon.png";
-import Adventure from "../assets/AdventureIcon.png";
-import Cards from "../assets/CardsIcon.png";
-import CO from "../assets/COIcon.png";
-import Simulator from "../assets/SimulatorIcon.png";
-import Survival from "../assets/SurvivalIcon.png";
+import Action from "../../assets/ActionIcon.png";
+import Adventure from "../../assets/AdventureIcon.png";
+import Cards from "../../assets/CardsIcon.png";
+import CO from "../../assets/COIcon.png";
+import Simulator from "../../assets/SimulatorIcon.png";
+import Survival from "../../assets/SurvivalIcon.png";
 
 export default function Aside() {
   return (
