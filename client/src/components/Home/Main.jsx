@@ -57,7 +57,7 @@ export default function Main() {
   }, []);
   return (
     <article className=" w-full h-auto flex justify-center">
-      <section className="w-full h-full overflow-y-hidden">
+      <section className="w-full h-full">
         {data ? (
           <article className="grid grid-cols-5 gap-4 place-items-center place  h-full w-full">
             {data.map((item) => (

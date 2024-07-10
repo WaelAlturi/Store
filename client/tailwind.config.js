@@ -54,6 +54,14 @@ export default {
         left: "left 1.2s ease-in-out ",
         up: "up 0.9s ease-in-out ",
         border: "border 0.7s linear ",
+        "bounce-slow": "bounce 1s infinite",
+        "bounce-delay-1": "bounce 1s infinite 0.1s",
+        "bounce-delay-2": "bounce 1s infinite 0.2s",
+        "bounce-delay-3": "bounce 1s infinite 0.3s",
+        "bounce-delay-4": "bounce 1s infinite 0.4s",
+        "bounce-delay-5": "bounce 1s infinite 0.5s",
+        "bounce-delay-6": "bounce 1s infinite 0.6s",
+        "bounce-delay-7": "bounce 1s infinite 0.7s",
       },
     },
     borderRadius: {
@@ -71,5 +79,8 @@ export default {
       xl: "1280px",
     },
   },
-  plugins: [require("@xpd/tailwind-3dtransforms")],
+  plugins: [
+    require("@xpd/tailwind-3dtransforms"),
+    require("tailwind-scrollbar"),
+  ],
 };

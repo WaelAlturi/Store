@@ -26,7 +26,6 @@ route.post("/addToCart", (req, res) => {
         });
       } else {
         const saveGame = new cart(req.body.gameData);
-        console.log(req.body);
         saveGame
           .save()
           .then(() => {
@@ -49,7 +48,6 @@ route.post("/addToCart", (req, res) => {
 });
 route.delete("/delete/:id", (req, res) => {
   try {
-    console.log(req.params.id);
     cart
       .findByIdAndDelete(req.params.id)
       .then(() => {
