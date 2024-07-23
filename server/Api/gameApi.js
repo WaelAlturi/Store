@@ -46,16 +46,16 @@ route.get("/game", (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-route.get("/game/:id", (req, res) => {
+route.get("/game/:genres", (req, res) => {
   try {
     game
-      .findById(req.params.id)
+      .find({ genres: req.params.genres })
       .then((game) => {
         res.status(200).json(game);
       })
       .catch((err) => {
         res.status(500).json({
-          message: "Game Not Found",
+          message: err.message,
         });
       });
   } catch (err) {
